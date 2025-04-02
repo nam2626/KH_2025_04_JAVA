@@ -1,0 +1,7 @@
+저장 Ctrl + S
+실행 Ctrl + F11
+자동정렬 Ctrl + Shift + F
+출력문 sysout => Ctrl + Space
+라인 복사 Ctrl + Alt + (위/아래)
+라인 이동 Alt + (위/아래)
+한줄 삭제 Ctrl + D
