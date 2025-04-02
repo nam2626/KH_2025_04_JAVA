@@ -5,3 +5,8 @@
 라인 복사 Ctrl + Alt + (위/아래)
 라인 이동 Alt + (위/아래)
 한줄 삭제 Ctrl + D
+한줄 주석 Ctrl + /
+여러줄 주석 설정 Ctrl + Shift + /
+여러줄 주석 해제 Ctrl + Shift + \
+
+
