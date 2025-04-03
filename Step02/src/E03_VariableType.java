@@ -25,9 +25,54 @@ public class E03_VariableType {
 	 * 								   합성어 일때 두번째 단어부터 첫글자는 대문자
 	 */
 	public static void main(String[] args) {
-		
-		byte b = 127;
 
+		int i = 2147483647;
+		System.out.println(i);
+		
+		long l = 9223372036854775807L;
+		System.out.println(l);
+		
+		byte b = 126;
+		System.out.println(b);
+		
+		b++;
+		System.out.println(b);
+		
+		double d = 3.1415;
+		System.out.println(d);
+		
+		float f = 3.1415F;
+		System.out.println(f);
+		
+		char ch1 = 'A';
+		System.out.println(ch1);
+		
+		char ch2 = '가';
+		System.out.println(ch2);
+		
+		int i1 = ch1;
+		System.out.println(i1);
+		
+		int i2 = ch2;
+		System.out.println(i2);
+		
+		boolean flag = true;
+		System.out.println(flag);
+		
+		flag = false;
+		System.out.println(flag);
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
