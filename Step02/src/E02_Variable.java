@@ -28,6 +28,15 @@ public class E02_Variable {
 		System.out.println(n);
 		
 		//변수 두개 선언 30, 40으로 초기화
+		//동일한 변수타입의 변수를 여러개 선언하는 경우
+		int a = 30, b = 40;
+		System.out.println(a + " " + b);
+		
+		//정수를 저장할 변수 3개를 선언해서 전부 0으로 초기화 후에 출력
+//		int c = 0, d = 0, e = 0;
+		int c,d,e;
+		c = d = e = 0;
+		System.out.println(c + " " + d + " " + e);
 	}
 
 }
