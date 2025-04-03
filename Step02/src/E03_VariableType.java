@@ -62,6 +62,13 @@ public class E03_VariableType {
 		flag = false;
 		System.out.println(flag);
 		
+		//문자열
+		String str = "안녕하세요";
+		System.out.println(str);
+		
+		str = "Hello World";
+		System.out.println(str);
+		
 	}
 
 }
