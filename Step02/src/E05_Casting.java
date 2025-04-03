@@ -17,7 +17,33 @@ public class E05_Casting {
 	 * 
 	 */
 	public static void main(String[] args) {
-
+		//자동으로 형변환 되는 경우
+		int n = 120;
+		double d = 3.12;
+		System.out.println(n / d);
+		d = n;
+		System.out.println(d);
+		
+		short s = 100;//byte와 short는 int형에서 자동으로 형변환 되서 저장
+		System.out.println(s);
+	
+		//강제로 형변환하는 방법
+		//(바꾸고 싶은 변수 타입) 값 or 변수
+		double pi = 3.1415;
+		int i = (int)pi;
+		System.out.println(i);
+		
+		i = 65;
+		char ch1 = (char)i;
+		System.out.println(ch1);
 	}
 
 }
+
+
+
+
+
+
+
+
