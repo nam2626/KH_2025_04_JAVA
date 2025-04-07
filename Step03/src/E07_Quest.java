@@ -22,14 +22,15 @@ public class E07_Quest {
 		//case-2
 		//if 키워드 한개만 이용, 추가적인 변수 선언이 필요
 		//변수선언
-		int temp = 0;
-		if(		) {
+		if(n1 < n2) {
+			int temp = 0;
+			//n1과 n2를 바꾸겠다.
 			//1
-			
+			temp = n2;
 			//2
-			
+			n2 = n1;
 			//3
-			
+			n1 = temp;
 		}
 		
 		System.out.println("큰 숫자 : " + n1 + ", 작은 숫자 : " + n2);
