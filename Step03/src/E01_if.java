@@ -17,7 +17,7 @@ public class E01_if {
 	 * 
 	 */
 	public static void main(String[] args) {
-		int n = -10;
+		int n = 0;
 		
 		if(n > 0) {
 			System.out.println("양수입니다.");
@@ -26,6 +26,11 @@ public class E01_if {
 		if(n < 0) {
 			System.out.println("음수입니다.");
 		}
+		
+		//n이 0이면 0입니다. 출력하는 if문 추가
+		//{}가 없으면 첫번째 ; 까지가 실행할 영역으로 잡음
+		if(n == 0)
+			System.out.println("0입니다.");
 		
 		System.out.println("프로그램 종료");
 	}
