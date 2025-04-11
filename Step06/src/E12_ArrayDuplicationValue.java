@@ -7,8 +7,16 @@ public class E12_ArrayDuplicationValue {
 		int[] arr = new int[7];
 		//랜덤으로 배열에 숫자를 저장, 저장 범위 : 4~20
 		for(int i=0;i<arr.length;i++) {
-			int n = (int)(Math.random() * 17) + 4;
-			arr[i] = n;
+			//숫자를 랜덤으로 한개 생성
+			arr[i] = (int)(Math.random() * 17) + 4;
+			//중복 체크
+			for(int j=0;j<i;j++) {
+				//배열에 있는 요소값이 생성한 랜덤값과 같냐? 
+				if(arr[j] == arr[i]) {
+					i--;
+					break;
+				}
+			}
 		}
 		
 		//배열 내용 전체 출력 
