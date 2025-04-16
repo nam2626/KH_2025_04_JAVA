@@ -2,19 +2,15 @@
 public class E34_Review {
 
 	public static void main(String[] args) {
-		int[][] arr = new int[4][4];
+		int[][] scores = { { 80, 90, 100 }, { 70, 85 }, { 90, 95, 85, 100 } };
 		
-		for (int i = 0; i < arr.length; i++) {
-			arr[i][i] = 1;
-			arr[i][arr.length-1-i] = 1;
-		}
-		
-		
-		for(int i=0;i<arr.length;i++) {
-			for(int j=0;j<arr[i].length;j++) {
-				System.out.print(arr[i][j] + " ");
+		for (int i = 0; i < scores.length; i++) {
+			int sum = 0;
+			for (int j = 0; j < scores[i].length; j++) {
+				sum += scores[i][j];
+				System.out.printf("%-3d ",scores[i][j]);
 			}
-			System.out.println();
+			System.out.println(sum / scores[i].length);
 		}
 	}
 
