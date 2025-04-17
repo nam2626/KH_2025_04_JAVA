@@ -8,18 +8,34 @@ public class Student {
 	double score;
 
 	//모든 필드를 초기화하는 생성자 작성
-	Student(String sno, String sname, String mname, double s){
-		studentNo = sno;
-		studentName = sname;
-		majorName = mname;
-		score = s;		
+//	Student(String sno, String sname, String mname, double s){
+//		studentNo = sno;
+//		studentName = sname;
+//		majorName = mname;
+//		score = s;		
+//	}
+	
+	//기본생성자
+	public Student() {
+		super();
 	}
 	
+	
+	public Student(String studentNo, String studentName, String majorName, double score) {
+		//this => 자기 자신 객체를 나타내는 키워드
+		this.studentNo = studentNo;
+		this.studentName = studentName;
+		this.majorName = majorName;
+		this.score = score;
+	}
+
+
 	//학생정보 출력하는 메서드
 	void printStudentInfo() {
 		System.out.println(studentNo + " " + studentName 
 				+ " " + majorName + " " + score);
 	}
+
 }
 
 
