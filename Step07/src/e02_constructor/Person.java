@@ -26,6 +26,14 @@ public class Person {
 		name = n;
 	}
 	
+	//이름, 나이 받아서 초기화하는 생성자
+	Person(String n, int a){
+		System.out.println("Person(String, int) 생성자");
+		name = n;
+		age = a;
+	}
+	
+	
 	void printInfo() {
 		System.out.println(name + " / " + age);
 	}
