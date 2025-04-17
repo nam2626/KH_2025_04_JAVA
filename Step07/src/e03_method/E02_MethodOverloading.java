@@ -11,6 +11,13 @@ public class E02_MethodOverloading {
 	 * 		2. 매개변수 개수가 서로 다르면 됨
 	 * 	
 	 */
+	static int sum(int a, int...arr) {
+		System.out.println("sum(int,int...arr)");
+		int s = 0;
+		for(int i = 0;i<arr.length;i++)
+			s += arr[i];
+		return s;
+	}
 	static int sum(int...arr) {
 		System.out.println("sum(int...arr)");
 		int s = 0;
@@ -49,6 +56,9 @@ public class E02_MethodOverloading {
 	
 	public static void main(String[] args) {
 		System.out.println(sum(10, 20));
+		System.out.println(sum(10, 20, 30));
+		//sum(int a, int...arr), sum(int...arr) 호출하는 형태가 겹쳐서 사용하는 쪽에서 오류
+//		System.out.println(sum(10, 20, 30, 40));
 		System.out.println(sum((short)5, (short)6));
 		System.out.println(sum(2.14, 4.21));
 	}
