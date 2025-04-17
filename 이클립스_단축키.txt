@@ -8,5 +8,6 @@
 한줄 주석 Ctrl + /
 여러줄 주석 설정 Ctrl + Shift + /
 여러줄 주석 해제 Ctrl + Shift + \
-
+생성자 필드 초기화 Alt + Shift + s -> o
+기본 생성자 Alt + Shift + s -> c
 
