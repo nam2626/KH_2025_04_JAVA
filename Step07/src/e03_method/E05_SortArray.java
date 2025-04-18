@@ -15,8 +15,12 @@ public class E05_SortArray {
 		for(int i=0;i<arr.length-1;i++) {
 			//j j+1 값을 비교해서 큰 값을 j+1번째로 저장 
 			//두값을 비교해서 큰값이 뒤로 가게끔 서로 교환
-			for() {
-				
+			for(int j = 0; j < arr.length - 1 - i; j++) {
+				if(arr[j] > arr[j+1]) {
+					int temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+				}
 			}
 			printArray(arr);
 		}
@@ -25,7 +29,7 @@ public class E05_SortArray {
 	
 	public static void main(String[] args) {
 		int[] arr1 = new int[] {5,7,9,3,1};
-		printArray(arr1);
+		sortBuble(arr1);
 	}
 
 }
