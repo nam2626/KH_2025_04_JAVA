@@ -27,9 +27,30 @@ public class E05_SortArray {
 		
 	}
 	
+	public static void sortSelect(int[] arr) {
+		for (int i = 0; i < arr.length - 1; i++) {
+			//비교할 인덱스 번호
+			// 제일 작은 값이 있는 인덱스를 저장할 변수
+			int idx = i;
+			for(int j = i + 1; j < arr.length; j++) {
+				//작은 값에 해당하는 인덱스값을 idx에 저장
+				if(arr[idx] > arr[j])
+					idx = j;
+			}
+			//제일 작은 값이 있는 인덱스와 기준 인덱스 값과 교환
+			int temp = arr[i];
+			arr[i] = arr[idx];
+			arr[idx] = temp;
+			
+			printArray(arr);
+		}
+	}
 	public static void main(String[] args) {
 		int[] arr1 = new int[] {5,7,9,3,1};
 		sortBuble(arr1);
+		System.out.println();
+		int[] arr2 = new int[] {5,7,9,3,1};
+		sortSelect(arr2);
 	}
 
 }
