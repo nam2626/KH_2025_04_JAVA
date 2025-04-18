@@ -28,10 +28,14 @@ public class Student {
 		this.majorName = majorName;
 		this.score = score;
 	}
+	
+	public void updateScore(double score) {
+		this.score = score;
+	}
 
 
 	//학생정보 출력하는 메서드
-	void printStudentInfo() {
+	public void printStudentInfo() {
 		System.out.println(studentNo + " " + studentName 
 				+ " " + majorName + " " + score);
 	}
