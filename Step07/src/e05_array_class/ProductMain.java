@@ -15,6 +15,11 @@ public class ProductMain {
 		
 		for(Product p : arr) {
 			System.out.println(p);
+			p.setName("테스트");
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
 		}
 	}
 
