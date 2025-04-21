@@ -16,7 +16,7 @@ public class Number {
 	private static Number instance = new Number();
 
 	//필드
-	private int num;
+	private static int num;
 	
 	//2. 생성자는 private 생성자로 작성
 	private Number() {
