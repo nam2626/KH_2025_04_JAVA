@@ -13,9 +13,12 @@ package e06_static;
 public class Card {
 	private int cardNo;
 	private String name;
-
+	
+	private static int cardNoSeq = 1000;
+	
 	public Card(String name) {
 		this.name = name;
+		this.cardNo = ++cardNoSeq;
 	}
 
 	@Override
