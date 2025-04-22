@@ -20,6 +20,7 @@ public class StudentMain {
 			System.out.println("  0. 프로그램 종료");
 			System.out.print("  원하시는 번호 입력 : ");
 			int no = sc.nextInt();
+			sc.nextLine();//엔터 제거
 			
 			//숫자 0 입력했을때 종료
 			switch(no) {
@@ -27,6 +28,7 @@ public class StudentMain {
 				System.out.println("프로그램이 종료 되었습니다.");
 				return;
 			case 1:
+				service.addStudent(sc);
 				break;
 			case 5:
 				service.printAllStudent();
