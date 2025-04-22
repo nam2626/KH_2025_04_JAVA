@@ -122,6 +122,15 @@ public class StudentService {
 		
 		
 	}
+
+	public void searchStudentName(Scanner sc) {
+		//1. 학생 이름 일부를 입력 받음
+		
+		//2. 전체 학생 정보 접근하면서
+		//	 입력받은 문자열이 학생 이름에 포함되어 있으면 출력
+		
+		
+	}
 	
 	
 	

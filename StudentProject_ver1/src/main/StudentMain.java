@@ -42,6 +42,9 @@ public class StudentMain {
 			case 5:
 				service.printAllStudent();
 				break;
+			case 6:
+				service.searchStudentName(sc);
+				break;
 			}
 		}
 	}
