@@ -48,6 +48,26 @@ public class StudentService {
 		list.add(new StudentDTO(studentNo, studentName, majorName, score));
 		
 	}
+
+	public int searchStudentNo(Scanner sc) {
+		//1. 검색할 학번 입력
+		System.out.println("학생정보를 검색합니다.......");
+		//학생 정보 입력 받음
+		System.out.print("검색할 학번 입력 : ");
+		String studentNo = sc.nextLine();
+		//2. 리스트 처음부터 마지막까지 접근하면 동일한 학번을 가진 객체를 찾음
+		for(int i=0;i<list.size();i++) {
+			//문자열 내용이 같은지 비교하는 메서드 equals
+			if(studentNo.equals(list.get(i).getStudentNo())) {
+				//3. 검색 결과가 있으면 해당 학생 정보를 출력
+				System.out.println(list.get(i));
+				return i;
+			}
+		}
+		//4. 검색 결과가 없으면 "해당 학번을 가진 학생은 없습니다."
+		System.out.println("해당 학번을 가진 학생은 없습니다.");
+		return -1;
+	}
 	
 	
 	

@@ -30,6 +30,9 @@ public class StudentMain {
 			case 1:
 				service.addStudent(sc);
 				break;
+			case 3:
+				service.searchStudentNo(sc);
+				break;
 			case 5:
 				service.printAllStudent();
 				break;
