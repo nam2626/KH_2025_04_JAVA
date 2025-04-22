@@ -86,8 +86,40 @@ public class StudentService {
 		
 		if(idx == -1)
 			System.out.println("삭제할 학생 정보가 없습니다.");
-		else
+		else {
 			list.remove(idx);
+			System.out.println("학생 정보 삭제하였습니다.");
+		}
+		
+	}
+
+	public void updateStudent(Scanner sc) {
+		//수정할 학번 입력
+		//학번에 해당하는 학생을 검색
+		System.out.println("학생 정보 수정을 시작합니다.....");
+		System.out.print("수정할 학번 입력 : ");
+		String studentNo = sc.nextLine();
+		
+		int idx = searchStudentNo(studentNo);
+		
+		if(idx == -1) System.out.println("수정할 학생 정보가 없습니다.");
+		else {
+			//수정할 학생이 있을때, 이름, 학과명, 평점을 받아서 저장
+			System.out.print("수정할 학생 이름 입력 : ");
+			String studentName = sc.nextLine();
+			System.out.print("수정할 학과명 입력 : ");
+			String majorName = sc.nextLine();
+			System.out.print("수정할 평점 입력 : ");
+			double score = sc.nextDouble();
+			
+			StudentDTO student = list.get(idx);
+			student.setStudentName(studentName);
+			student.setMajorName(majorName);
+			student.setScore(score);			
+			
+			System.out.println("학생 정보를 수정하였습니다.");
+		}
+		
 		
 	}
 	
