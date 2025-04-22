@@ -124,11 +124,23 @@ public class StudentService {
 	}
 
 	public void searchStudentName(Scanner sc) {
+		System.out.println("학생 이름으로 검색을 시작합니다....");
 		//1. 학생 이름 일부를 입력 받음
-		
+		System.out.print("검색할 이름 입력 : ");
+		String studentName = sc.nextLine();
 		//2. 전체 학생 정보 접근하면서
 		//	 입력받은 문자열이 학생 이름에 포함되어 있으면 출력
-		
+		for(StudentDTO std : list) {
+//			문자열 부분일치 검색시 조건문 주의할점
+//			검색어 : 수
+//			"수" 문자열에 "김철수"가 있냐?
+//			if(studentName.indexOf(std.getStudentName()) != -1) {}
+			
+//			"김철수" 문자열에 "수"가 있냐?
+			if(std.getStudentName().indexOf(studentName) != -1) {
+				System.out.println(std);
+			}
+		}
 		
 	}
 	
