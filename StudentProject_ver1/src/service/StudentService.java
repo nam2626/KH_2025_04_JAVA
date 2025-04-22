@@ -78,7 +78,16 @@ public class StudentService {
 	}
 	
 	public void deleteStudent(Scanner sc) {
+		System.out.println("학생 정보 삭제를 시작합니다.....");
+		System.out.print("삭제할 학번 입력 : ");
+		String studentNo = sc.nextLine();
+		//검색하는 메서드 실행
+		int idx = searchStudentNo(studentNo);
 		
+		if(idx == -1)
+			System.out.println("삭제할 학생 정보가 없습니다.");
+		else
+			list.remove(idx);
 		
 	}
 	
