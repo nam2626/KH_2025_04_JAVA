@@ -62,6 +62,13 @@ public class Student {
 		
 		return avg + " / " + grade ;
 	}
+
+	@Override
+	public String toString() {
+		return stdNo + " / " + stdName + 
+				" / "+ majorName + " / " + getGrade();
+	}
+	
 }
 
 
