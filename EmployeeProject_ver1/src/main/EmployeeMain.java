@@ -32,6 +32,12 @@ public class EmployeeMain {
 			case 3:
 				service.searchByEmpNo(sc);
 				break;
+			case 5:
+				service.updateSalary(sc);
+				break;
+			case 6:
+				service.deleteByEmpNo(sc);
+				break;
 			}
 		}
 		

@@ -1,6 +1,7 @@
 package service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -78,6 +79,44 @@ public class EmployeeService {
 		else
 			System.out.println(emp);
 	}
+
+	public void deleteByEmpNo(Scanner sc) {
+		System.out.println("사원 정보 삭제를 시작합니다....");
+		System.out.print("삭제할 사원번호를 입력하세요 : ");
+		int empNo = Integer.parseInt(sc.nextLine());
+		
+		EmployeeDTO emp = searchByEmpNo(empNo);
+		
+		if(emp == null) 
+			System.out.println("입력하신 사번에 해당하는 사원이 없습니다.");
+		else
+			list.remove(emp);//객체 비교로 동일한 객체를 삭제
+	}
+
+	public void updateSalary(Scanner sc) {
+		System.out.println("사원의 급여 변경을 시작합니다....");
+		//사번, 새급여 한번에 입력 받고
+		//105 3400 <-- 입력 형태
+		//105,3400 <-- 입력 형태
+		System.out.print("사번과 변경할 급여를 입력하세요 : ");
+		String cmd = sc.nextLine();
+		String[] arr = cmd.split(" ");
+//		System.out.println(Arrays.toString(arr));
+		
+		//검색 후 급여 값을 변경
+		EmployeeDTO emp = searchByEmpNo(Integer.parseInt(arr[0]));
+		
+		if(emp != null) {
+			emp.setSalary(Integer.parseInt(arr[1]));
+			System.out.println("급여 변경 완료");
+		}else {
+			System.out.println("급여 변경할 사원이 없습니다.");
+		}
+	}
 	
 	
 }
+
+
+
+
