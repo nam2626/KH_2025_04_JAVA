@@ -66,6 +66,28 @@ public class Subject {
 		
 		return grade;
 	}
+	
+	public double getGradeScore() {
+		double grade = 4.5;
+		switch(score / 5) {
+		case 12:
+			grade -= 0.5;
+		case 13:
+			grade -= 0.5;
+		case 14:
+			grade -= 0.5;
+		case 15:
+			grade -= 0.5;
+		case 16:
+			grade -= 0.5;
+		case 17:
+			grade -= 0.5;
+		case 18:
+			grade -= 0.5;
+		}
+		
+		return grade;
+	}
 }
 
 
