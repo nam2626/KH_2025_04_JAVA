@@ -10,12 +10,10 @@ public class Lotto {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		Random r = new Random();
 		
-		for(int i = 0; i < 6; i++) {
+		while(list.size() < 6) {
 			int n = r.nextInt(1, 46);
-			if(list.indexOf(n) > -1) {
-				i--;
+			if(list.contains(n)) 
 				continue;
-			}
 			list.add(n);
 		}
 		
