@@ -113,6 +113,21 @@ public class EmployeeService {
 			System.out.println("급여 변경할 사원이 없습니다.");
 		}
 	}
+
+	public void searchByName(Scanner sc) {
+		System.out.println("사원 이름으로 검색을 시작합니다....");
+		System.out.print("검색할 사원이름 일부 입력 : ");
+		String name = sc.nextLine();
+		
+		int count = 0;
+		for (EmployeeDTO emp : list) {
+			if(emp.getName().contains(name)) {
+				count++;
+				System.out.println(emp);
+			}
+		}
+		if(count == 0) System.out.println("검색 결과가 없습니다.");
+ 	}
 	
 	
 }
