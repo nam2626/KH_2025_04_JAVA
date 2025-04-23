@@ -2,6 +2,7 @@ package service;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Scanner;
 
 import dto.EmployeeDTO;
 
@@ -34,6 +35,26 @@ public class EmployeeService {
 			System.out.println(emp);
 		}
 		System.out.println();
+	}
+
+	/**
+	 * 사원 정보 등록하는 메서드
+	 * 이름, 부서, 급여 입력 받아서 등록
+	 * @param sc 키보드로 입력 받는 객체
+	 */
+	public void add(Scanner sc) {
+		System.out.println("사원 정보 등록을 시작합니다.....");
+		System.out.print("이름 : ");
+		String name = sc.nextLine();
+		System.out.print("부서명 : ");
+		String dept = sc.nextLine();
+		System.out.print("급여 : ");
+		int salary = Integer.parseInt(sc.nextLine());
+		
+		//리스트에 사원 객체 생성해서 등록
+		list.add(new EmployeeDTO(name, dept, salary));
+		System.out.println("사원 정보 등록 완료");
+		
 	}
 
 	
