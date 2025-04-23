@@ -54,10 +54,30 @@ public class EmployeeService {
 		//리스트에 사원 객체 생성해서 등록
 		list.add(new EmployeeDTO(name, dept, salary));
 		System.out.println("사원 정보 등록 완료");
-		
 	}
-
 	
+	//사번으로 사원 검색하는 메서드
+	private EmployeeDTO searchByEmpNo(int empNo) {
+		//사번으로 검색하고 해당 Employee객체를 리스트에서 가져와서 리턴
+		for(EmployeeDTO emp : list) {
+			if(emp.getEmpNo() == empNo)
+				return emp;
+		}
+		return null;
+	}
+	
+	public void searchByEmpNo(Scanner sc) {
+		System.out.println("사원 정보 검색을 시작합니다....");
+		System.out.print("검색할 사원번호를 입력하세요 : ");
+		int empNo = Integer.parseInt(sc.nextLine());
+		
+		EmployeeDTO emp = searchByEmpNo(empNo);
+		
+		if(emp == null) 
+			System.out.println("입력하신 사번에 해당하는 사원이 없습니다.");
+		else
+			System.out.println(emp);
+	}
 	
 	
 }

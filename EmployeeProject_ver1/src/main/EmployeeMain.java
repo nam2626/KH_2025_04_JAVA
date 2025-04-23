@@ -25,8 +25,12 @@ public class EmployeeMain {
 				return;
 			case 1:
 				service.add(sc);
+				break;
 			case 2:
 				service.printAll();
+				break;
+			case 3:
+				service.searchByEmpNo(sc);
 				break;
 			}
 		}
