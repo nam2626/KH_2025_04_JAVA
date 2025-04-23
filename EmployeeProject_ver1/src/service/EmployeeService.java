@@ -1,6 +1,7 @@
 package service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import dto.EmployeeDTO;
 
@@ -22,6 +23,17 @@ public class EmployeeService {
 		if(instance == null)
 			instance = new EmployeeService();
 		return instance;
+	}
+	
+	/**
+	 * 전체 사원정보 출력하는 메서드
+	 */
+	public void printAll() {
+		System.out.println("전체 사원 정보를 출력합니다.....");
+		for(EmployeeDTO emp : list) {
+			System.out.println(emp);
+		}
+		System.out.println();
 	}
 
 	
