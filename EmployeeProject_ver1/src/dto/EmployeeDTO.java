@@ -9,12 +9,14 @@ public class EmployeeDTO {
 	private String dept;
 	private int salary;
 
+	private static int empNoSeq = 101;
+	
 	public EmployeeDTO() {
-		this.empNo = 0;
+		this.empNo = empNoSeq++;
 	}
 
 	public EmployeeDTO(String name, String dept, int salary) {
-		this.empNo = 0;
+		this.empNo = empNoSeq++;
 		this.name = name;
 		this.dept = dept;
 		this.salary = salary;
