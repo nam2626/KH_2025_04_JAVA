@@ -17,7 +17,8 @@ public class Student {
 	
 	//기본생성자
 	public Student() {
-		super();
+		//this() --> 다른 생성자를 호출
+		this("00000000","홍길동","학과명샘플",2.4);
 	}
 	
 	
