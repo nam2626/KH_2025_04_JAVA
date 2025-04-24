@@ -1,10 +1,10 @@
 package e03_super;
 
-public class Car {
+public class Avante {
 	protected int fuel;
 	protected int speed;
 	
-	public Car() {
+	public Avante() {
 		fuel = 100;
 	}
 	
@@ -16,6 +16,7 @@ public class Car {
 
 		if(speed + 5 <= 240)
 			speed += 5;
+		fuel--;
 		System.out.println("엑셀을 밟습니다.");
 		System.out.println(
 				String.format("현재 속도 : %dkm/h - 남은 연료 : %d",
