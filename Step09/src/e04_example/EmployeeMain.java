@@ -3,7 +3,9 @@ package e04_example;
 import java.util.ArrayList;
 
 public class EmployeeMain {
-
+	public static void printInfo(Employee e) {
+		e.printEmployeeInfo();
+	}
 	public static void main(String[] args) {
 		Employee emp = new Employee("홍길동", 5000);
 		emp.printEmployeeInfo(); 
@@ -50,6 +52,10 @@ public class EmployeeMain {
 				.reduce(0, (prev, cur) -> prev + cur );
 		System.out.println("지급 되는 급여 총액 : " + total);
 		
+		//--------------------------
+		printInfo(fw);
+		printInfo(pw);
+		printInfo(pt);
 	}
 
 }
