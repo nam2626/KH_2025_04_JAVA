@@ -9,7 +9,7 @@ package e08_has_a;
  * 
  */
 public class Gun {
-	private int bullet;
+	protected int bullet;
 
 	public Gun() {
 		bullet = 12;
