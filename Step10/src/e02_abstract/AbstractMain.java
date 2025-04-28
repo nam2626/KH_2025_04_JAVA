@@ -13,7 +13,10 @@ public class AbstractMain {
 		
 		a = new Human();
 		a.run();
-	
+		
+		//다른 서브클래스로 형변환 X
+		Dog d1 = (Dog) a;
+		d1.eat();
 	}
 
 }
