@@ -1,22 +1,22 @@
 package e06_example;
 
-public class AirCon extends Power{
-
+public class AirCon implements Power{
+	private boolean power;
 	@Override
 	public void powerOn() {
-		super.powerOn();
+		power = POWER_ON;
 		System.out.println("AirCon 전원 On");
 	}
 
 	@Override
 	public void powerOff() {
-		super.powerOff();
+		power = POWER_OFF;
 		System.out.println("AirCon 전원 Off");
 	}
 
 	@Override
 	public void powerOnOff() {
-		super.powerOnOff();
+		power = !power;
 		if(power)
 			System.out.println("AirCon 전원 On");
 		else
