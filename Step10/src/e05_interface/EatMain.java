@@ -6,6 +6,7 @@ public class EatMain {
 		Dog d = new Dog();
 		
 		Eat e = d;
+		e.eat("생고기");
 	}
 
 }
