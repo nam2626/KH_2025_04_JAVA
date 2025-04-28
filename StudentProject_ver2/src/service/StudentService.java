@@ -35,6 +35,14 @@ public class StudentService {
 		//학생 정보 입력 받음
 		System.out.print("등록할 학번 입력 : ");
 		String studentNo = sc.nextLine();
+		//학생 번호가 중복되었는지 체크 후 중복되면 해당 작업 강제 종료
+		//보낸 대상의 값의 equals를 실행, 문자열만 보내면, String의 equals가 실행
+		//필요한 데이터만 넣어서 임시객체 만들어서 중복 체크함.
+//		if(list.contains(studentNo)) {// X
+		if(list.contains(new StudentDTO(studentNo, null, null, 0))) {
+			System.out.println("학번이 중복되었습니다.");
+			return;
+		}
 		System.out.print("등록할 학생 이름 입력 : ");
 		String studentName = sc.nextLine();
 		System.out.print("등록할 학과명 입력 : ");

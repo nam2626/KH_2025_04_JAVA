@@ -1,5 +1,7 @@
 package dto;
 
+import java.util.Objects;
+
 public class StudentDTO {
 	private String studentNo;
 	private String studentName;
@@ -55,6 +57,25 @@ public class StudentDTO {
 		return studentNo + " " + studentName + " "+ majorName
 				+ " " + score;
 	}
+
+	@Override
+	public int hashCode() {
+		System.out.println("StudentDTO - hashCode");
+		return Objects.hash(studentNo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		System.out.println("StudentDTO - equal");
+		if (this == obj)
+			return true;
+		if (!(obj instanceof StudentDTO))
+			return false;
+		
+		StudentDTO other = (StudentDTO) obj;
+		return Objects.equals(studentNo, other.studentNo);
+	}
+	
 	
 }
 
