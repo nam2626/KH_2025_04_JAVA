@@ -9,6 +9,7 @@ public class IotMain {
         app.powerAllOffDevice();
 
         app.addDevice(new TV());
+        app.addDevice(new SmartTV());
         app.powerAllOnDevice();
     }
 }
