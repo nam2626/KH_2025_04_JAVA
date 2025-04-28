@@ -1,17 +1,12 @@
 package e06_example;
 
-public class Power {
-	protected boolean power;
+public interface Power {
+	public static final boolean POWER_ON = true;
+	public static final boolean POWER_OFF = false;
 	
-	public void powerOn() {
-		power = true;
-	}
-	public void powerOff() {
-		power = false;
-	}
-	public void powerOnOff() {
-		power = !power;
-	}
+	public void powerOn();
+	public void powerOff();
+	public void powerOnOff();
 }
 
 
