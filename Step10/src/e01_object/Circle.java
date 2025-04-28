@@ -31,10 +31,14 @@ public class Circle implements Cloneable {
 	public String toString() {
 		return "Circle [pos=" + pos + ", r=" + r + "]";
 	}
-
+	
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		return super.clone();
+		//깊은 복사, 얕은 복사 체크
+		//참조형의 경우 깊은 복사를 수행
+		//깊은 복사는 참조형의 경우 메모리 주소값이 복제가됨
+		//참조형 데이터는 새로 복제를 해서 저장
+		return new Circle((Point) pos.clone(), r);
 	}
-
+	
 }
