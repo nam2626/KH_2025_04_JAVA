@@ -10,6 +10,9 @@ public class AbstractMain {
 		//추상 클래스도 데이터 타입, 자식 클래스를 형변환 시켜서 저장 작업은 됨
 		Animal a = d;
 		a.run();
+		
+		a = new Human();
+		a.run();
 	
 	}
 
