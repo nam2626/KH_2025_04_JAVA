@@ -64,7 +64,7 @@ public class StudentService {
 		System.out.print("검색할 학번 입력 : ");
 		String studentNo = sc.nextLine();
 		//검색하는 메서드 실행
-		int idx = searchStudentNo(studentNo);
+		int idx = list.indexOf(new StudentDTO(studentNo, null, null, 0));
 		
 		if(idx != -1) {
 			System.out.println(list.get(idx));
@@ -76,13 +76,7 @@ public class StudentService {
 	
 	//학번을 외부에서 받아와서 검색
 	private int searchStudentNo(String studentNo) {
-		for(int i=0;i<list.size();i++) {
-			//문자열 내용이 같은지 비교하는 메서드 equals
-			if(studentNo.equals(list.get(i).getStudentNo())) {
-				return i;
-			}
-		}
-		return -1;
+		return list.indexOf(new StudentDTO(studentNo, null, null, 0));
 	}
 	
 	public void deleteStudent(Scanner sc) {
