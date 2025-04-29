@@ -84,14 +84,10 @@ public class StudentService {
 		System.out.print("삭제할 학번 입력 : ");
 		String studentNo = sc.nextLine();
 		//검색하는 메서드 실행
-		int idx = searchStudentNo(studentNo);
-		
-		if(idx == -1)
-			System.out.println("삭제할 학생 정보가 없습니다.");
-		else {
-			list.remove(idx);
+		if(list.remove(new StudentDTO(studentNo, null, null, 0)))
 			System.out.println("학생 정보 삭제하였습니다.");
-		}
+		else 
+			System.out.println("삭제할 학생 정보가 없습니다.");
 		
 	}
 
@@ -102,7 +98,7 @@ public class StudentService {
 		System.out.print("수정할 학번 입력 : ");
 		String studentNo = sc.nextLine();
 		
-		int idx = searchStudentNo(studentNo);
+		int idx = list.indexOf(new StudentDTO(studentNo, null, null, 0));
 		
 		if(idx == -1) System.out.println("수정할 학생 정보가 없습니다.");
 		else {
