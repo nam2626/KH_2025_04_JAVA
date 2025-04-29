@@ -44,6 +44,22 @@ public class MapTest {
 			System.out.println(k + " / " + map.get(k));
 		}
 		
+		//데이터 삭제
+		map.remove("B");
+		System.out.println(map);
+		//맵에 저장된 데디터 개수
+		System.out.println(map.size());
+		//해당 키값이 있냐?
+		System.out.println(map.containsKey("A"));
+		System.out.println(map.containsKey("B"));
+		//해당 값이 있냐?
+		System.out.println(map.containsValue(new Point(10, 7)));
+		//맵 내용 비우기
+//		map.clear();
+//		System.out.println(map);
+		//맵에 내용이 있냐?
+		System.out.println(map.isEmpty());
+		
 	}
 
 }
