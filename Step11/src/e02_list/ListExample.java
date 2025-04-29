@@ -1,6 +1,9 @@
 package e02_list;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Vector;
 
 public class ListExample {
 	/*
@@ -16,6 +19,8 @@ public class ListExample {
 	public static void main(String[] args) {
 		//문자열 저장하는 ArrayList 생성
 		ArrayList<String> list = new ArrayList<String>();
+//		LinkedList<String> list = new LinkedList<String>();
+//		Vector<String> list = new Vector<String>();
 		//데이터 추가 - 7건
 		list.add("HTML/CSS");
 		list.add("js/jQuery");
@@ -70,7 +75,15 @@ public class ListExample {
 		for (String str : list) {
 			System.out.println(str);
 		}
+		System.out.println("------");
+		//데이터 꺼내는 방법 - 3
+		//Iterator(반복자) : Collection의 데이터를 처음부터 마지막까지 접근할떄 사용
+		Iterator<String> it = list.iterator();
 		
+		while(it.hasNext()) {
+			//다음 데이터 가져옴
+			System.out.println(it.next());
+		}
 		
 	}
 
