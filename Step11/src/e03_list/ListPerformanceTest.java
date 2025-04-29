@@ -1,4 +1,4 @@
-package e02_list;
+package e03_list;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
