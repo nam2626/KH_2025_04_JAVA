@@ -2,7 +2,7 @@ package e03_list;
 
 import java.util.Objects;
 
-public class Point {
+public class Point implements Comparable<Point> {
 	private int x;
 	private int y;
 
@@ -47,6 +47,18 @@ public class Point {
 			return false;
 		Point other = (Point) obj;
 		return x == other.x && y == other.y;
+	}
+
+	//TreeSet일 경우 compareTo로 비교
+	//자신이 작은 경우 음수, 같으면 0, 비교대상 값이 크면 양수
+	@Override
+	public int compareTo(Point o) {
+		System.out.println("compareTo");
+		if(this.x != o.x)
+			return this.x - o.x;
+		if(this.y != o.y)
+			return this.y - o.y;
+		return 0;//두 객체가 값이 같을때
 	}
 	
 	
