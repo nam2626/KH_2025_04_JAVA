@@ -28,8 +28,10 @@ public class MemberManager {
 		System.out.println("---");
 		ListIterator<MemberDTO> lit = memberList.listIterator();
 		while(lit.hasNext()) {
-			int i = lit.nextIndex();
-			System.out.println(i + " " + memberList.get(i));
+			//다음위치로 이동 X, 다음 인덱스만 꺼내줌
+			//int i = lit.nextIndex();
+			System.out.println(lit.nextIndex() + " " + lit.next());
+			
 		}
 			
 	}
