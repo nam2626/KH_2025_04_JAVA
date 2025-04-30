@@ -1,6 +1,6 @@
 package e01_exception;
 
-public class ExcpetionEx2 {
+public class ExceptionEx2 {
 
 	public static void main(String[] args) {
 		try {
