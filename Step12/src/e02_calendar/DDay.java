@@ -1,5 +1,6 @@
 package e02_calendar;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class DDay {
@@ -15,6 +16,14 @@ public class DDay {
 		long dday = (end.getTime() - start.getTime())
 				/ (1000 * 60 * 60 * 24) ;
 		System.out.println(dday);
+		
+		//위에 코드를 Calendar 이용해서 처리
+		Calendar s = Calendar.getInstance();
+		Calendar e = Calendar.getInstance();
+		e.setTime(end);
+		
+		System.out.println(e.get(Calendar.DAY_OF_YEAR) - 
+				s.get(Calendar.DAY_OF_YEAR));
 		
 	}
 
