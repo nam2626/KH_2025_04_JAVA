@@ -23,6 +23,7 @@ public class OutterClass {
 		}
 		
 		public void printInner() {
+			//Outter 클래스의 private 멤버에 접근이 가능
 			System.out.println(outter + " -> " + inner);
 		}
 		
