@@ -16,7 +16,10 @@ public class OutterStaticInnerClass {
 		}
 		
 		public int sum() {
-			return outter + inner;
+			//Inner 클래스가 static 이기 떄문에 누구의 outter 필드인지 모름
+			//static은 non-static에 접근 할 수 없다.
+//			return outter + inner;
+			return n + inner;
 		}
 	}
 	
