@@ -13,7 +13,8 @@ public class View {
 	}
 
 	public void onClick() {
-		
+		if(clickListener != null)
+			clickListener.onClick(this);
 	}
 	
 	public static interface OnClickListener{
