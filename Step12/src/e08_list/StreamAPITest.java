@@ -42,7 +42,12 @@ public class StreamAPITest {
 		avg /= list.size();
 		System.out.println("전체 평점 평균 : " + avg);
 		//학생 정보 중에 제일 평점이 높은 학생을 출력
+		StudentDTO max = 
+				list.stream().reduce(list.get(0), 
+						(prev, cur) -> 
+				prev.getScore() > cur.getScore() ? prev : cur);
 		
+		max.printInfo();
 		
 		
 	}
