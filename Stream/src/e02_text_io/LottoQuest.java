@@ -29,29 +29,34 @@ public class LottoQuest {
 	
 	//로또번호가 담긴 리스트를 받아서 제공되는 형식으로 로또 번호 문자열 생성
 	public static String makeLottoForm(ArrayList<TreeSet<Integer>> list) {
-		System.out.println(String.format("%13s", "LOTTO"));
-		System.out.println("---------------------");
+		StringBuilder sb = new StringBuilder();
+		sb.append(String.format("%13s\n", "LOTTO"));
+		sb.append("---------------------\n");
 		list.forEach(set -> {
-			System.out.print("  ");
-			set.forEach(item -> System.out.print(String.format("%02d ", item)));
-			System.out.println();
+			sb.append("  ");
+			set.forEach(item -> sb.append(String.format("%02d ", item)));
+			sb.append("\n");
 		});
-		System.out.println("---------------------");
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		System.out.println(sdf.format(Calendar.getInstance().getTime()));
+		sb.append("---------------------\n");
+		SimpleDateFormat sdf = new SimpleDateFormat(" yyyy/MM/dd HH:mm:ss");
+		sb.append(sdf.format(Calendar.getInstance().getTime()));
 		
-		return "";
+		return sb.toString();
 	}
 	
 	//생성한 로또 번호 문자열을 받아서 텍스트 파일로 출력하는 메서드
 	public static void fileWrite(String str) {
-		
+		//파일 출력
+		//파일명 2025_05_01_lotto.txt
 	}
 	
 	public static void main(String[] args) {
 		ArrayList<TreeSet<Integer>> list = createLotto(5);
 //		list.stream().forEach(item -> System.out.println(item));
-		makeLottoForm(list);
+		String result = makeLottoForm(list);
+		System.out.println(result);
+		fileWrite(result);
+		
 	}
 
 }
