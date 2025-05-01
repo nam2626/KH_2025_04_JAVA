@@ -12,6 +12,10 @@ public class View {
 		return name;
 	}
 
+	public void setClickListener(OnClickListener clickListener) {
+		this.clickListener = clickListener;
+	}
+
 	public void onClick() {
 		if(clickListener != null)
 			clickListener.onClick(this);
