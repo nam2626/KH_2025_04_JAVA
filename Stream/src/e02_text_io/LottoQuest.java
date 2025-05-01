@@ -1,8 +1,12 @@
 package e02_text_io;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Random;
 import java.util.TreeSet;
+
+import javax.swing.event.ListSelectionEvent;
 
 public class LottoQuest {
 	
@@ -25,6 +29,17 @@ public class LottoQuest {
 	
 	//로또번호가 담긴 리스트를 받아서 제공되는 형식으로 로또 번호 문자열 생성
 	public static String makeLottoForm(ArrayList<TreeSet<Integer>> list) {
+		System.out.println(String.format("%13s", "LOTTO"));
+		System.out.println("---------------------");
+		list.forEach(set -> {
+			System.out.print("  ");
+			set.forEach(item -> System.out.print(String.format("%02d ", item)));
+			System.out.println();
+		});
+		System.out.println("---------------------");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		System.out.println(sdf.format(Calendar.getInstance().getTime()));
+		
 		return "";
 	}
 	
@@ -34,7 +49,9 @@ public class LottoQuest {
 	}
 	
 	public static void main(String[] args) {
-		
+		ArrayList<TreeSet<Integer>> list = createLotto(5);
+//		list.stream().forEach(item -> System.out.println(item));
+		makeLottoForm(list);
 	}
 
 }
