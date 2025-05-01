@@ -1,12 +1,13 @@
 package e02_text_io;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Random;
 import java.util.TreeSet;
-
-import javax.swing.event.ListSelectionEvent;
 
 public class LottoQuest {
 	
@@ -48,6 +49,16 @@ public class LottoQuest {
 	public static void fileWrite(String str) {
 		//파일 출력
 		//파일명 2025_05_01_lotto.txt
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd");
+		String fileName = sdf.format(Calendar.getInstance().getTime());
+		fileName += "_lotto.txt";
+		try(FileWriter fw = new FileWriter("c:\\test\\"+fileName);
+			PrintWriter pw = new PrintWriter(fw)){
+			pw.println(str);
+			System.out.println(fileName + " 생성 완료");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public static void main(String[] args) {
