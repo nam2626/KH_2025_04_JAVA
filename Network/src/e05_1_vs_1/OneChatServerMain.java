@@ -29,12 +29,14 @@ public class OneChatServerMain {
 		
 	}
 	public static void main(String[] args) {
-		try(ServerSocket server = new ServerSocket(4444);
+		try(ServerSocket server = new ServerSocket(5555);
 			Socket client = server.accept();
 			Scanner sc = new Scanner(System.in);
 			PrintWriter pw = new PrintWriter(
 					client.getOutputStream())){
-			
+			Worker worker = new Worker(client);
+			worker.start();
+			System.out.println(client.getInetAddress() + "님이 접속하셨습니다.....");
 			while(true) {
 				System.out.println("메세지 입력 : ");
 				String msg = sc.nextLine();
