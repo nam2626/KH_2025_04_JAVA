@@ -25,6 +25,7 @@ public class ClientMain {
 			int n = sc.nextInt();
 			//서버로 숫자 전송
 			pw.println(n);
+			pw.flush();
 			//서버가 보낸 메세지를 받아서 출력
 			System.out.println("결과 : " + br.readLine());
 		} catch (UnknownHostException e) {

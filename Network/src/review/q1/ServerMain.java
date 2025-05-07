@@ -26,7 +26,7 @@ public class ServerMain {
 			str = n % 2 == 0 ? "짝수입니다." : "홀수입니다.";
 			//결과를 클라이언트로 전송
 			pw.println(str);
-			
+			pw.flush();
 			
 		} catch (IOException e) {
 			e.printStackTrace();
