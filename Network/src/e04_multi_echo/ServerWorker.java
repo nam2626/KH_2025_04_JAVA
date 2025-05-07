@@ -29,10 +29,13 @@ public class ServerWorker implements Runnable{
 				pw.println(str);
 				pw.flush();
 			}
-			
-			
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			//ServerMain에 있는 리스트에 본인 객체를 제거하고
+			System.out.println(client.getInetAddress() 
+					+ "님이 접속 종료를 하셨습니다.");
+			MultiEchoServerMain.removeServerWorker(this);
 		}
 	}
 
