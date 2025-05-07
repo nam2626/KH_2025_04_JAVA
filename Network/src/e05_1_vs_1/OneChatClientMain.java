@@ -4,11 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class OneChatServerMain {
+public class OneChatClientMain {
 	public static class Worker extends Thread{
 		private Socket client;
 
@@ -31,14 +30,12 @@ public class OneChatServerMain {
 		
 	}
 	public static void main(String[] args) {
-		try(ServerSocket server = new ServerSocket(5555);
-			Socket client = server.accept();
+		try(Socket server = new Socket("127.0.0.1",5555);
 			Scanner sc = new Scanner(System.in);
 			PrintWriter pw = new PrintWriter(
-					client.getOutputStream())){
-			Worker worker = new Worker(client);
+					server.getOutputStream())){
+			Worker worker = new Worker(server);
 			worker.start();
-			System.out.println(client.getInetAddress() + "님이 접속하셨습니다.....");
 			while(true) {
 				System.out.println("메세지 입력 : ");
 				String msg = sc.nextLine();
