@@ -48,7 +48,7 @@ public class ChattingServerInnerMain {
 		public ServerWorker(Socket client) {
 			this.client = client;
 			try {
-				pw = new PrintWriter(client.getOutputStream());
+				pw = new PrintWriter(client.getOutputStream(),true);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

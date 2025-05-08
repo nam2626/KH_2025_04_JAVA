@@ -33,7 +33,7 @@ public class ChattingClientMain {
 		try(Socket server = new Socket("127.0.0.1",3333);
 			Scanner sc = new Scanner(System.in);
 			PrintWriter pw = new PrintWriter(
-					server.getOutputStream())){
+					server.getOutputStream(),true)){
 			Worker worker = new Worker(server);
 			worker.start();
 			while(true) {
@@ -41,7 +41,7 @@ public class ChattingClientMain {
 				String msg = sc.nextLine();
 				if(msg.equals("exit")) break;
 				pw.println(msg);
-				pw.flush();
+//				pw.flush();
 			}
 			
 		} catch (IOException e) {
